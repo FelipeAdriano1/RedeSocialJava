@@ -1,0 +1,27 @@
+package redeSocial;
+import java.util.HashMap;
+import java.util.Map;
+
+abstract class Usuario {
+	private String nome;
+	private String email;
+	private String senha;
+	private int uid;
+	
+	abstract void setNome(String novoNome);
+	abstract void setSenha(String novaSenha);
+	abstract void setEmail(String novoEmail);
+	
+	public String getNome() {
+		return nome;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public int getUID() {
+		return uid;
+	}
+}

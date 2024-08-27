@@ -1,0 +1,20 @@
+package redeSocial;
+
+import java.util.List;
+
+public class UsuarioComum extends Usuario {
+	/*abstract void setNome(String novoNome);
+	abstract void setSenha(String novaSenha);
+	abstract void setEmail(String novoEmail);
+	abstract void adicionarPostagens(Postagens post);
+	abstract void removerPostagens(Postagens post);*/
+	
+	public UsuarioComum(String nome, String email, String senha) {
+		super(nome, email, senha);
+	}
+	
+	public void adicionarPostagens(String titulo, String conteudo) {
+		List<Postagens> posts = getPostagens();
+		
+	}
+}

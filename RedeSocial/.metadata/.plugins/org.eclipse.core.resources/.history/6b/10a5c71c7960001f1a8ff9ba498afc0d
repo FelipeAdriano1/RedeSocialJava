@@ -1,0 +1,7 @@
+package redeSocial;
+
+abstract class Postagens {
+	private String conteudo;
+	private Date dataCriacao;
+	private int curtidas;
+}

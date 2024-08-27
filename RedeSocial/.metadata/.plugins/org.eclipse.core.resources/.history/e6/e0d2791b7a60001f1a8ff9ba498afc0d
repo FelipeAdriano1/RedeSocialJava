@@ -1,0 +1,18 @@
+package redeSocial;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
+abstract class Postagens {
+	private int pid;
+	private String titulo;
+	private String conteudo;
+	private Date dataCriacao;
+	private Map<Integer, String> comentarios = new HashMap<>();
+	private Map<Integer, Integer> curtidas = new HashMap<>();
+	
+	public Postagens(String titulo, String conteudo) {
+		
+	}
+}

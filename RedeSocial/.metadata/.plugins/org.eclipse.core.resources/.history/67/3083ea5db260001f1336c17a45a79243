@@ -1,0 +1,9 @@
+package redeSocial;
+
+interface Curtivel {
+	public int curtidas = 0;
+	
+	public void curtir();
+	
+	public void getCurtidas();
+}

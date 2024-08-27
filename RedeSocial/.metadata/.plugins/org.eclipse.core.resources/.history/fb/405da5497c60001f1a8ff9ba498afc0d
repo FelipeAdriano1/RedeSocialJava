@@ -1,0 +1,34 @@
+package redeSocial;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+abstract class Usuario {
+	private String nome;
+	private String email;
+	private String senha;
+	private int uid;
+	private List<Postagens> posts = new ArrayList<>(); 
+	
+	abstract void setNome(String novoNome);
+	abstract void setSenha(String novaSenha);
+	abstract void setEmail(String novoEmail);
+	abstract void adicionarPostagens(Postagens post);
+	
+	public String getNome() {
+		return nome;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public int getUID() {
+		return uid;
+	}
+	public List<Postagens> getPostagens() {
+		return posts;
+	}
+}

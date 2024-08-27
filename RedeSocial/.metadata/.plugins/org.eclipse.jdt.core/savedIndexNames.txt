@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\adria\OneDrive\Documentos\IFSP\3SEMESTRE\Linguagem de Programação 3\RedeSocial\.metadata\.plugins\org.eclipse.jdt.core
+3413270776.index
+1865797976.index
+3075204944.index

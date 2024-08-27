@@ -1,0 +1,68 @@
+package redeSocial;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class RedeSocial {
+	List<Usuario> users = new ArrayList<>();
+	
+	public RedeSocial() {}
+	
+	public boolean isRegistrado(String email, String senha) {
+		for(Usuario u : users) {
+			if(u.getEmail() == email) {
+				if(u.getSenha() == senha) {
+				return true;
+				}
+			}
+			else {
+				return false;
+			}
+		}
+		return false;
+	}
+
+	public String addUsuario(String nome, String senha, String email, String tipo) {
+		Regex reg = new Regex();
+
+		switch(tipo) {
+		case "Comum": 
+			if (reg.validarEmail(email) != false) {
+				if(nome != null) {
+					Usuario user = new UsuarioComum(nome, email, senha, tipo);
+				}
+			}
+			return "\nCadastro efetuado com sucesso !";
+		
+		case "Premium":
+			if (reg.validarEmail(email) != false) {
+				if(nome != null) {
+					Usuario user = new UsuarioPremium(nome, email, senha, tipo);
+				}
+			}
+			return "\nCadastro efetuado com sucesso !";
+			
+		case "Admin": 
+			if (reg.validarEmail(email) != false) {
+				if(nome != null) {
+					Usuario user = new UsuarioAdmin(nome, email, senha, tipo);
+				}
+			}
+			return "\nCadastro efetuado com sucesso !";
+		}
+		return "\nNão foi possível efetuar o cadastro.";
+	}
+	
+	public List<Usuario> getUsuarios(){
+		return users;
+	}
+	
+	public Usuario getUsuario(String email) {
+		for(Usuario u : users) {
+			if(u.getEmail().equals(email)) {
+				return u;
+			}
+		}
+		return null;
+	}
+}

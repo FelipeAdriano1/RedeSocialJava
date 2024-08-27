@@ -1,0 +1,5 @@
+package redeSocial;
+
+public class PostagemComum extends Postagens{
+
+}

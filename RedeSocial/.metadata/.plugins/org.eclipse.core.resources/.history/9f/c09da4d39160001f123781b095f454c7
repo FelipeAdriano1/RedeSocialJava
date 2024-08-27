@@ -1,0 +1,24 @@
+package redeSocial;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class RedeSocial {
+	private String emailLogado;
+	List<Usuario> users = new ArrayList<>();
+	
+	public RedeSocial(String emailUser) {
+		
+		this.emailLogado = emailUser;
+	}
+	
+	public String addUsuario(Usuario user) {
+		if(user != null) {
+			users.add(user);
+			return "\nUsuário adicionado a rede social !";
+		}
+		else {
+			return "\nNão foi possível adicionar o usuário a rede social";
+		}
+	}
+}

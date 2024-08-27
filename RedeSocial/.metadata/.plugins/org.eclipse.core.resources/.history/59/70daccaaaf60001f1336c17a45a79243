@@ -1,0 +1,47 @@
+package redeSocial;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class RedeSocial {
+	private String emailLogado;
+	List<UsuarioComum> usersC = new ArrayList<>();
+	List<UsuarioPremium> usersP = new ArrayList<>();
+	List<UsuarioAdmin> userA = new ArrayList<>();
+	
+	public RedeSocial() {}
+	
+	public boolean isRegistrado(String email) {
+		
+	}
+
+	public String addUsuario(String nome, String senha, String email, String tipo) {
+		Regex reg = new Regex();
+
+		switch(tipo) {
+		case "Comum": 
+			if (reg.validarEmail(email) != false) {
+				if(nome != null) {
+					Usuario user = new UsuarioComum(nome, email, senha);
+				}
+			}
+			return "\nUsuário comum cadastrado.";
+		
+		case "Premium":
+			if (reg.validarEmail(email) != false) {
+				if(nome != null) {
+					Usuario user = new UsuarioPremium(nome, email, senha);
+				}
+			}
+			return "\nUsuário premium cadastrado com sucesso !!\nSeja bem vindo !";
+			
+		case "Admin": 
+			if (reg.validarEmail(email) != false) {
+				if(nome != null) {
+					Usuario user = new UsuarioAdmin(nome, email, senha);
+				}
+			}
+			return "\nUsuário premium cadastrado com sucesso !!\nSeja bem vindo !";
+		}
+	}
+}

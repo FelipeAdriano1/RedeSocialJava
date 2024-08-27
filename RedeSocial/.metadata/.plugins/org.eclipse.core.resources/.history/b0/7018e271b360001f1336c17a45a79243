@@ -1,0 +1,9 @@
+package redeSocial;
+
+import java.util.Map;
+
+interface Curtivel {
+	public boolean curtir(int pid, int uid);
+	
+	public Map<Integer, Integer> getCurtidas();
+}

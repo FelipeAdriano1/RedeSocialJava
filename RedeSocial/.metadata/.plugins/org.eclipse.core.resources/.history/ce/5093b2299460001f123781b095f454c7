@@ -1,0 +1,15 @@
+package redeSocial;
+
+public class UsuarioComum extends Usuario {
+	/*abstract void setNome(String novoNome);
+	abstract void setSenha(String novaSenha);
+	abstract void setEmail(String novoEmail);
+	abstract void adicionarPostagens(Postagens post);
+	abstract void removerPostagens(Postagens post);*/
+	
+	public void adicionarPostagens(String titulo, String conteudo) {
+		if(titulo != null || conteudo != null) {
+			
+		}
+	}
+}

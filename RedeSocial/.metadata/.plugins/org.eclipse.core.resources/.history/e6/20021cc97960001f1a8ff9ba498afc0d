@@ -1,0 +1,16 @@
+package redeSocial;
+import java.util.Date;
+import java.util.Map;
+
+abstract class Postagens {
+	private int pid;
+	private String conteudo;
+	private Date dataCriacao;
+	private int curtidas;
+	
+	private Map<Integer, String> comementarios;
+	
+	public Postagens() {
+		
+	}
+}

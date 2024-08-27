@@ -1,0 +1,12 @@
+package redeSocial;
+
+public class Comentarios {
+	private int uid; //Usuário ID
+	private int pid; //Postagem ID
+	private int cid; //Comentário ID
+	private String comentario;
+	
+	public Comentarios() {
+		uid = 
+	}
+}

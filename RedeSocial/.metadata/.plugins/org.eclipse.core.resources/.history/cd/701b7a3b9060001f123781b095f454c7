@@ -1,0 +1,9 @@
+package redeSocial;
+
+public class RedeSocial {
+	private String emailLogado;
+	
+	public RedeSocial(String emaiUser) {
+		this.emailLogado = emaiUser;
+	}
+}

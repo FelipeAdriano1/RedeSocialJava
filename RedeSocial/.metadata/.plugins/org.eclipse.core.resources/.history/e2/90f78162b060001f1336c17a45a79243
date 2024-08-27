@@ -1,0 +1,30 @@
+package redeSocial;
+
+import java.util.List;
+
+public class UsuarioAdmin extends Usuario {
+	public UsuarioAdmin(String nome, String email, String senha) {
+		super(nome, email, senha, tipo);
+	}
+	
+	public boolean adicionarPostagens(String titulo, String conteudo, String tipo) {
+		List<Postagens> posts = getPostagens();
+		
+		Postagens post = new PostagemPremium(titulo, conteudo);
+		
+		posts.add(post);
+		return false;
+	}
+	
+	public boolean removerPostagens(Postagens post) {
+		List<Postagens> posts = getPostagens();
+		
+		posts.remove(post);
+		
+		return false;
+	}
+	
+	public boolean banirUsuario(Usuario user) {
+		
+	}
+}

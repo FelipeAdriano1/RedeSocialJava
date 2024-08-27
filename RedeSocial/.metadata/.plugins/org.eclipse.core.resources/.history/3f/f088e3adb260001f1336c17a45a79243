@@ -1,0 +1,25 @@
+package redeSocial;
+
+import java.util.List;
+import java.util.Map;
+
+public class PostagemPremium extends Postagens{
+	public PostagemPremium(String titulo, String conteudo) {
+		super(titulo, conteudo);
+	}
+	
+	public boolean adicionarComentario(Integer pid, Integer uid, String Comentario) {
+		List<Comentarios> coment = getComentarios();
+		
+		Comentarios comentario = new Comentarios(pid, uid, Comentario);
+		
+		coment.add(comentario);
+		return false;
+	}
+	
+	public boolean curtir(Integer pid, Integer uid) {
+		Map<Integer, Integer> curtidas = getCurtidas();
+		curtidas.put(uid, pid);
+		return false;
+	}
+}
